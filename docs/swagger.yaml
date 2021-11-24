@@ -1,0 +1,2116 @@
+definitions:
+  dbmodels.Cities:
+    properties:
+      city_code:
+        type: string
+      created_at:
+        type: string
+      id:
+        example: 1
+        type: integer
+      name:
+        type: string
+      province_id:
+        type: integer
+      updated_at:
+        type: string
+    type: object
+  dbmodels.DetailActivitasSalesmenReq:
+    properties:
+      date:
+        example: "2020-11-20"
+        type: string
+      id:
+        example: "9957"
+        type: string
+    type: object
+  dbmodels.DetailListActivitasTodolistReq:
+    properties:
+      category:
+        example: 2
+        type: integer
+      date:
+        example: "2020-11-20"
+        type: string
+      id:
+        example: "9957"
+        type: string
+      keyword:
+        example: OP1B00027785
+        type: string
+      page:
+        example: 1
+        type: integer
+      status:
+        example: Not Exist
+        type: string
+    type: object
+  dbmodels.District:
+    properties:
+      city_id:
+        type: integer
+      created_at:
+        type: string
+      district_code:
+        type: string
+      id:
+        example: 1
+        type: integer
+      name:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  dbmodels.JobCategories:
+    properties:
+      description:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+    type: object
+  dbmodels.JobDescriptions:
+    properties:
+      descLink:
+        items:
+          additionalProperties:
+            type: string
+          type: object
+        type: array
+      description:
+        type: string
+      id:
+        type: integer
+      jobManagementId:
+        type: integer
+      note:
+        type: string
+      noteLink:
+        items:
+          additionalProperties:
+            type: string
+          type: object
+        type: array
+    type: object
+  dbmodels.JobManagements:
+    properties:
+      acceptDate:
+        type: string
+      assignmentDate:
+        type: string
+      cancelDate:
+        type: string
+      completeDate:
+        type: string
+      createdAt:
+        type: string
+      deadline:
+        type: string
+      deliverDate:
+        type: string
+      id:
+        type: integer
+      jobCategoryId:
+        type: integer
+      jobDescriptions:
+        items:
+          $ref: '#/definitions/dbmodels.JobDescriptions'
+        type: array
+      jobPriority:
+        type: string
+      name:
+        type: string
+      recipientId:
+        type: integer
+      resendDate:
+        type: string
+      senderId:
+        type: integer
+      status:
+        type: integer
+      statusStorage:
+        type: boolean
+      updatedAt:
+        type: string
+    type: object
+  dbmodels.ListActivitasSalesmenReq:
+    properties:
+      Name:
+        example: SO TIMUR Indomarco
+        type: string
+      page:
+        example: 1
+        type: integer
+      period_from:
+        example: "2021-02-05"
+        type: string
+      period_to:
+        example: "2021-02-10"
+        type: string
+      sales_type_id:
+        example: "1"
+        type: string
+    type: object
+  dbmodels.MerchantNewRecruitments:
+    properties:
+      address:
+        example: Jalan Buntu no 21
+        type: string
+      city_id:
+        example: 3171
+        type: integer
+      created_at:
+        type: string
+      customer_code:
+        example: "1234566543216.0"
+        type: string
+      district_id:
+        example: 3171100
+        type: integer
+      id:
+        example: 1
+        type: integer
+      id_card:
+        example: "12345678909887654"
+        type: string
+      institution_code:
+        example: OP
+        type: string
+      latitude:
+        example: "-6.2354219"
+        type: string
+      longitude:
+        example: "106.81721122"
+        type: string
+      name:
+        example: Test Data 2
+        type: string
+      owner_name:
+        example: Namaku Siapa Ya
+        type: string
+      phone_number:
+        example: "088999121367"
+        type: string
+      province_id:
+        example: 31
+        type: integer
+      sales_type_id:
+        example: 1
+        type: integer
+      status:
+        example: Activated
+        type: string
+      sub_area_channel_id:
+        example: 4
+        type: integer
+      sub_area_channel_name:
+        example: Sub Area Jabar 0004
+        type: string
+      updated_at:
+        type: string
+      village_id:
+        example: 3171100008
+        type: integer
+    type: object
+  dbmodels.Provinces:
+    properties:
+      created_at:
+        type: string
+      id:
+        example: 1
+        type: integer
+      name:
+        example: IDM
+        type: string
+      province_code:
+        example: IDM
+        type: string
+      updated_at:
+        type: string
+    type: object
+  dbmodels.SubArea:
+    properties:
+      area_id:
+        type: integer
+      code:
+        type: string
+      id:
+        example: 1
+        type: integer
+      name:
+        type: string
+    type: object
+  dbmodels.Village:
+    properties:
+      created_at:
+        type: string
+      district_id:
+        type: integer
+      id:
+        example: 1
+        type: integer
+      name:
+        type: string
+      updated_at:
+        type: string
+      village_code:
+        type: string
+    type: object
+  miniomodels.UploadReq:
+    properties:
+      bucketName:
+        type: string
+      contentType:
+        type: string
+      data:
+        type: string
+      nameFile:
+        type: string
+    type: object
+  models.CreateTodolist:
+    properties:
+      customer_code:
+        type: string
+      merchant_id:
+        type: string
+      merchant_name:
+        type: string
+      merchant_phone:
+        type: string
+      notes:
+        type: string
+      sales_phone:
+        type: string
+      sales_type_id:
+        type: string
+      task_attributes:
+        items:
+          $ref: '#/definitions/models.TaskParams'
+        type: array
+      task_date:
+        type: string
+      todolist_category_id:
+        type: integer
+      village_id:
+        type: integer
+    type: object
+  models.CreateTodolistV2:
+    properties:
+      address:
+        example: AIA Central Lt. 27, Jl. Jend. Sudirman No.Kav 48A, RT.5/RW.4, Karet
+          Semanggi, Setia Budi, RT.5/RW.4, Karet Semanggi, Kota Jakarta Selatan, Daerah
+          Khusus Ibukota Jakarta 12930, Indonesia
+        type: string
+      address_benchmark:
+        example: sebelah rumah sakit jiwa
+        type: string
+      customer_code:
+        example: "5200522100082316.0"
+        type: string
+      merchant_id:
+        example: 53229
+        type: integer
+      merchant_name:
+        example: Merchant Test
+        type: string
+      merchant_phone:
+        example: "082222230118"
+        type: string
+      mid:
+        example: OP1B00000083
+        type: string
+      notes:
+        type: string
+      owner_name:
+        example: Wawan
+        type: string
+      sales_phone:
+        example: "082113776997"
+        type: string
+      sales_type_id:
+        example: 2
+        type: integer
+      task_attributes:
+        items:
+          $ref: '#/definitions/models.TaskParams'
+        type: array
+      task_date:
+        example: 2021-24-04
+        type: string
+      todolist_category_id:
+        example: 6
+        type: integer
+      village_id:
+        example: 3171100008
+        type: integer
+    type: object
+  models.MerchantDetailReq:
+    properties:
+      merchant_id:
+        type: string
+    type: object
+  models.MerchantGroupReq:
+    properties:
+      merchant_type:
+        example: UMKM
+        type: string
+    type: object
+  models.MerchantListReq:
+    properties:
+      keyword:
+        type: string
+    type: object
+  models.MerchantNewRecruitmentExportRes:
+    properties:
+      address:
+        example: Jalan Buntu no 21
+        type: string
+      city_id:
+        example: 3171
+        type: integer
+      city_name:
+        example: KOTA JAKARTA SELATAN
+        type: string
+      created_at:
+        type: string
+      customer_code:
+        example: "1234566543216.0"
+        type: string
+      district_id:
+        example: 3171100
+        type: integer
+      district_name:
+        example: SETIA BUDI
+        type: string
+      id:
+        example: 1
+        type: integer
+      id_card:
+        example: "12345678909887654"
+        type: string
+      institution_code:
+        example: OP
+        type: string
+      latitude:
+        example: "-6.2354219"
+        type: string
+      longitude:
+        example: "106.81721122"
+        type: string
+      name:
+        example: Test Data 2
+        type: string
+      owner_name:
+        example: Namaku Siapa Ya
+        type: string
+      phone_number:
+        example: "088999121367"
+        type: string
+      province_id:
+        example: 31
+        type: integer
+      province_name:
+        example: DKI JAKARTA
+        type: string
+      sales_type_id:
+        example: 1
+        type: integer
+      status:
+        example: Activated
+        type: string
+      sub_area_channel_id:
+        example: 4
+        type: integer
+      sub_area_channel_name:
+        example: Sub Area Jabar 0004
+        type: string
+      updated_at:
+        type: string
+      village_id:
+        example: 3171100008
+        type: integer
+      village_name:
+        example: SETIA BUDI
+        type: string
+    type: object
+  models.MerchantNewRecruitmentListReq:
+    properties:
+      customer_code:
+        example: "566543"
+        type: string
+      id:
+        example: "2"
+        type: string
+      institution_code:
+        example: OP
+        type: string
+      name:
+        example: Data
+        type: string
+      page:
+        type: integer
+      phone_number:
+        example: "088999121367"
+        type: string
+      status:
+        example: Activated
+        type: string
+      sub_area_channel_name:
+        example: "0004"
+        type: string
+    type: object
+  models.Meta:
+    properties:
+      code:
+        example: 200
+        type: integer
+      message:
+        example: OK
+        type: string
+      status:
+        example: true
+        type: boolean
+    type: object
+  models.NewMerchantDetailReq:
+    properties:
+      customer_code:
+        type: string
+      phone_number:
+        type: string
+    type: object
+  models.NewMerchantListReq:
+    properties:
+      keyword:
+        type: string
+    type: object
+  models.ReqEditJobManagement:
+    properties:
+      acceptDate:
+        description: |-
+          AssignmentDate  string                     `json:"assignmentDate"`
+          StatusStorage   bool                       `json:"statusStorage"`
+          CreatedAt       string                     `json:"createdAt"`
+          UpdatedAt       string                     `json:"updatedAt" example:"2021-10-25"`
+        example: "2021-10-25"
+        type: string
+      cancelDate:
+        example: "2021-10-25"
+        type: string
+      completeDate:
+        example: "2021-10-25"
+        type: string
+      deliverDate:
+        example: "2021-10-25"
+        type: string
+      id:
+        example: 1
+        type: integer
+      jobDescriptions:
+        items:
+          $ref: '#/definitions/dbmodels.JobDescriptions'
+        type: array
+      recipientId:
+        type: integer
+      resendDate:
+        example: "2021-10-25"
+        type: string
+      senderId:
+        description: |-
+          Name            string                     `json:"name"`
+          JobCategoryId   int64                      `json:"jobCategoryId"`
+        type: integer
+      status:
+        description: |-
+          Deadline        string                     `json:"deadline"`
+          JobPriority     string                     `json:"jobPriority"`
+        example: 3
+        type: integer
+    type: object
+  models.ReqFilterJobCategories:
+    properties:
+      id:
+        example: 1
+        type: integer
+      limit:
+        example: 10
+        type: integer
+      name:
+        example: Kategori A
+        type: string
+      page:
+        example: 1
+        type: integer
+    type: object
+  models.ReqFilterJobManagements:
+    properties:
+      dateEnd:
+        example: "2021-10-19"
+        type: string
+      dateStart:
+        example: "2021-10-19"
+        type: string
+      id:
+        example: 1
+        type: integer
+      jobCategoryId:
+        example: 1
+        type: integer
+      jobPriority:
+        example: High
+        type: string
+      limit:
+        example: 10
+        type: integer
+      name:
+        example: Kategori A
+        type: string
+      page:
+        example: 1
+        type: integer
+      recipientId:
+        type: integer
+      senderId:
+        type: integer
+      status:
+        example: 3
+        type: integer
+      statusStorage:
+        example: false
+        type: boolean
+    type: object
+  models.Response:
+    properties:
+      data: {}
+      meta:
+        $ref: '#/definitions/models.Meta'
+    type: object
+  models.ResponsePagination:
+    properties:
+      data: {}
+      message:
+        example: success
+        type: string
+      meta: {}
+      response_code:
+        example: "00"
+        type: string
+    type: object
+  models.SearchReq:
+    properties:
+      keyword:
+        example: IDM
+        type: string
+    type: object
+  models.TaskParams:
+    properties:
+      file_edukasi:
+        type: string
+      sub_category_id:
+        type: string
+      supplier_name:
+        type: string
+    type: object
+  models.UpdateTodolist:
+    properties:
+      category_id:
+        type: string
+      id:
+        type: string
+      merchant_id:
+        description: ID of merchant or merchant_new_recruitment
+        type: string
+      notes:
+        type: string
+      sales_phone:
+        type: string
+      task_attributes:
+        items:
+          $ref: '#/definitions/models.TaskParams'
+        type: array
+      task_date:
+        type: string
+    type: object
+  models.UpdateTodolistV2:
+    properties:
+      address:
+        example: AIA Central Lt. 27, Jl. Jend. Sudirman No.Kav 48A, RT.5/RW.4, Karet
+          Semanggi, Setia Budi, RT.5/RW.4, Karet Semanggi, Kota Jakarta Selatan, Daerah
+          Khusus Ibukota Jakarta 12930, Indonesia
+        type: string
+      address_benchmark:
+        example: sebelah rumah sakit jiwa
+        type: string
+      category_id:
+        example: "6"
+        type: string
+      id:
+        example: "136129"
+        type: string
+      merchant_id:
+        description: ID of merchant or merchant_new_recruitment
+        example: "2"
+        type: string
+      merchant_phone:
+        example: "082222230118"
+        type: string
+      notes:
+        type: string
+      owner_name:
+        example: Wawan
+        type: string
+      sales_phone:
+        example: "082113776997"
+        type: string
+      sales_type_id:
+        type: integer
+      task_attributes:
+        items:
+          $ref: '#/definitions/models.TaskParams'
+        type: array
+      task_date:
+        example: "2021-08-24"
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /ottosfa/v2.2/merchant-new-recruitment/bulk:
+    post:
+      consumes:
+      - application/json
+      description: Merchant New Recruitment - Upload
+      operationId: Merchant New Recruitment - Upload v2.2
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body with file csv
+        in: formData
+        name: file
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Merchant New Recruitment - Upload EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Merchant New Recruitment - Upload
+      tags:
+      - Merchant New Rec v2.2
+  /ottosfa/v2.3/Province/:
+    get:
+      consumes:
+      - application/json
+      description: Province - list by country
+      operationId: Province - list by country
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolists - Create EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Province - list by country
+      tags:
+      - Province V2.3
+  /ottosfa/v2.3/action-types:
+    get:
+      consumes:
+      - application/json
+      description: Admin - ActionType
+      operationId: Admin - ActionType
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolists - Create EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Admin - ActionType
+      tags:
+      - Admin V2.3
+  /ottosfa/v2.3/activitas-salesmen/detail-callplan:
+    get:
+      consumes:
+      - application/json
+      description: Activitas Salesmen -  Detail Callplan
+      operationId: Activitas Salesmen -  Detail Callplan
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Activitas Salesmen - Detail Sales EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Activitas Salesmen -  Detail Callplan
+      tags:
+      - Activitas Salesmen V2.3
+  /ottosfa/v2.3/activitas-salesmen/detail-sales:
+    post:
+      consumes:
+      - application/json
+      description: Activitas Salesmen -  Detail Sales
+      operationId: Activitas Salesmen -  Detail Sales
+      parameters:
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/dbmodels.DetailActivitasSalesmenReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Activitas Salesmen - Detail Sales EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Activitas Salesmen -  Detail Sales
+      tags:
+      - Activitas Salesmen V2.3
+  /ottosfa/v2.3/activitas-salesmen/detail-todolist:
+    get:
+      consumes:
+      - application/json
+      description: Activitas Salesmen -  Detail Todolist
+      operationId: Activitas Salesmen -  Detail Todolist
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Activitas Salesmen - Detail Sales EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Activitas Salesmen -  Detail Todolist
+      tags:
+      - Activitas Salesmen V2.3
+  /ottosfa/v2.3/activitas-salesmen/list:
+    post:
+      consumes:
+      - application/json
+      description: Activitas Salesmen - List
+      operationId: Activitas Salesmen - List
+      parameters:
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/dbmodels.ListActivitasSalesmenReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Activitas Salesmen - Create EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Activitas Salesmen - List
+      tags:
+      - Activitas Salesmen V2.3
+  /ottosfa/v2.3/activitas-salesmen/lits-detail-callplan:
+    post:
+      consumes:
+      - application/json
+      description: Activitas Salesmen - List Detail Callplan
+      operationId: Activitas Salesmen - List Detail Callplan
+      parameters:
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/dbmodels.DetailListActivitasTodolistReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Activitas Salesmen - List Detail Callplan
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Activitas Salesmen - List Detail Callplan
+      tags:
+      - Activitas Salesmen V2.3
+  /ottosfa/v2.3/activitas-salesmen/lits-detail-todolist:
+    post:
+      consumes:
+      - application/json
+      description: Activitas Salesmen - List Detail Todo List
+      operationId: Activitas Salesmen - List Detail Todo List
+      parameters:
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/dbmodels.DetailListActivitasTodolistReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Activitas Salesmen - List Detail Todo List
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Activitas Salesmen - List Detail Todo List
+      tags:
+      - Activitas Salesmen V2.3
+  /ottosfa/v2.3/admin-sub-area/delete-by-admin:
+    delete:
+      consumes:
+      - application/json
+      description: AdminSubArea - DeleteByAdmin
+      operationId: AdminSubArea - DeleteByAdmin
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolists - Create EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: AdminSubArea - DeleteByAdmin
+      tags:
+      - AdminSubArea V2.3
+  /ottosfa/v2.3/admin/role/list:
+    get:
+      consumes:
+      - application/json
+      description: Role - List
+      operationId: Role - List
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolists - Create EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Role - List
+      tags:
+      - Role V2.3
+  /ottosfa/v2.3/company-codes:
+    get:
+      consumes:
+      - application/json
+      description: Company Codes - List
+      operationId: Company Codes - List
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolists - Create EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Company Codes - List
+      tags:
+      - Company Codes V2.3
+  /ottosfa/v2.3/company//list:
+    get:
+      consumes:
+      - application/json
+      description: Company - List
+      operationId: Company - List
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolists - Create EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Company - List
+      tags:
+      - Company V2.3
+  /ottosfa/v2.3/country/:
+    get:
+      consumes:
+      - application/json
+      description: Country - List
+      operationId: Country - List
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolists - Create EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Country - List
+      tags:
+      - Country V2.3
+  /ottosfa/v2.3/gender/:
+    get:
+      consumes:
+      - application/json
+      description: Gender - List
+      operationId: Gender - List
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolists - Create EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Gender - List
+      tags:
+      - Gender V2.3
+  /ottosfa/v2.3/job-management/edit:
+    post:
+      consumes:
+      - application/json
+      description: JobManagement - Edit
+      operationId: JobManagement - Edit
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.ReqEditJobManagement'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: JobManagement - Edit EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: JobManagement - Edit
+      tags:
+      - JobManagement
+  /ottosfa/v2.3/job-management/filter:
+    post:
+      consumes:
+      - application/json
+      description: JobManagement - Filter
+      operationId: JobManagement - Filter
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.ReqFilterJobManagements'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.ResponsePagination'
+      summary: JobManagement - Filter
+      tags:
+      - JobManagement
+  /ottosfa/v2.3/job-management/save:
+    post:
+      consumes:
+      - application/json
+      description: JobManagement - Create
+      operationId: JobManagement - Create
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/dbmodels.JobManagements'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: JobManagement - Create EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: JobManagement - Create
+      tags:
+      - JobManagement
+  /ottosfa/v2.3/job-management/upload:
+    post:
+      consumes:
+      - application/json
+      description: JobManagement - Upload
+      operationId: JobManagement - Upload
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body with file csv
+        in: formData
+        name: file
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: JobManagement - Upload EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: JobManagement - Upload
+      tags:
+      - JobManagement
+  /ottosfa/v2.3/jobcategories/filter:
+    post:
+      consumes:
+      - application/json
+      description: JobCategories - Filter
+      operationId: JobCategories - Filter
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.ReqFilterJobCategories'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: JobCategories - Filter
+      tags:
+      - JobCategories
+  /ottosfa/v2.3/jobcategories/save:
+    post:
+      consumes:
+      - application/json
+      description: JobCategories - Create
+      operationId: JobCategories - Create
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/dbmodels.JobCategories'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: JobCategoriess - Create EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: JobCategories - Create
+      tags:
+      - JobCategories
+  /ottosfa/v2.3/jobcategories/update:
+    post:
+      consumes:
+      - application/json
+      description: Jobcategories - Update
+      operationId: Jobcategories - Update
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/dbmodels.JobCategories'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: jobcategoriess - Update EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Jobcategories - Update
+      tags:
+      - Jobcategories
+  /ottosfa/v2.3/todolist/bulk:
+    post:
+      consumes:
+      - application/json
+      description: Todolist - Upload
+      operationId: Todolist - Upload V2.3
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body with file csv
+        in: formData
+        name: file
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolist - Upload EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Todolist - Upload
+      tags:
+      - Todolist
+  /ottosfa/v2.3/todolist/create:
+    post:
+      consumes:
+      - application/json
+      description: Todolist - Create V2.3
+      operationId: Todolist - Create V2.3
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateTodolistV2'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolists - Create EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Todolist - Create V2.3
+      tags:
+      - Todolist V2.3
+  /ottosfa/v2.3/todolist/detail/:todolist_id:
+    get:
+      consumes:
+      - application/json
+      description: Todolist - Detail
+      operationId: Todolist - Detail V2.3
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolists - Create EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Todolist - Detail
+      tags:
+      - Todolist V2.3
+  /ottosfa/v2.3/todolist/merchant-detail:
+    post:
+      consumes:
+      - application/json
+      description: Merchant Detail
+      operationId: merchant-detail
+      parameters:
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/models.MerchantDetailReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Merchant Detail
+      tags:
+      - TodoList V2.3
+  /ottosfa/v2.3/todolist/merchant-list:
+    post:
+      consumes:
+      - application/json
+      description: Merchant List
+      operationId: merchant-list
+      parameters:
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/models.MerchantListReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Merchant List
+      tags:
+      - TodoList V2.3
+  /ottosfa/v2.3/todolist/update:
+    post:
+      consumes:
+      - application/json
+      description: Todolist - Update V2.3
+      operationId: Todolist - Update V2.3
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateTodolistV2'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolists - Update EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Todolist - Update V2.3
+      tags:
+      - Todolist V2.3
+  /ottosfa/v2.3/upload-image:
+    post:
+      consumes:
+      - application/json
+      description: Upload Image
+      operationId: Upload Image
+      parameters:
+      - description: Bearer
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: request body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/miniomodels.UploadReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: UploadImage
+  /ottosfa/v2.3/village/list:
+    get:
+      consumes:
+      - application/json
+      description: Village - List by district
+      operationId: Village - List by district
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolists - Create EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Village - List by district
+      tags:
+      - Village V2.3
+  /ottosfa/v2/city/list:
+    post:
+      consumes:
+      - application/json
+      description: City - List
+      operationId: City - List
+      parameters:
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.SearchReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: City - List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dbmodels.Cities'
+                  type: array
+              type: object
+      summary: City - List
+      tags:
+      - List
+  /ottosfa/v2/district/list:
+    post:
+      consumes:
+      - application/json
+      description: District - List
+      operationId: District - List
+      parameters:
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.SearchReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: District - List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dbmodels.District'
+                  type: array
+              type: object
+      summary: District - List
+      tags:
+      - List
+  /ottosfa/v2/health-check:
+    get:
+      consumes:
+      - application/json
+      description: Health Check
+      operationId: Health Check
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Health Check
+      tags:
+      - OTTO SFA WEB
+  /ottosfa/v2/institution/list:
+    post:
+      consumes:
+      - application/json
+      description: Institution - List
+      operationId: Institution - List
+      parameters:
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.SearchReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Institution - List
+      tags:
+      - List
+  /ottosfa/v2/merchant-business-type/list:
+    get:
+      consumes:
+      - application/json
+      description: MerchantBusinessType - List
+      operationId: MerchantBusinessType - List
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: MerchantBusinessType - List
+      tags:
+      - List
+  /ottosfa/v2/merchant-category/list:
+    get:
+      consumes:
+      - application/json
+      description: MerchantCategory - List
+      operationId: MerchantCategory - List
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: MerchantCategory - List
+      tags:
+      - List
+  /ottosfa/v2/merchant-group/list:
+    post:
+      consumes:
+      - application/json
+      description: MerchantGroup - List
+      operationId: MerchantGroup - List
+      parameters:
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.MerchantGroupReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: MerchantGroup - List
+      tags:
+      - List
+  /ottosfa/v2/merchant-new-recruitment/bulk:
+    post:
+      consumes:
+      - application/json
+      description: Merchant New Recruitment - Upload
+      operationId: Merchant New Recruitment - Upload
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body with file csv
+        in: formData
+        name: file
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Merchant New Recruitment - Upload EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Merchant New Recruitment - Upload
+      tags:
+      - Merchant New Rec
+  /ottosfa/v2/merchant-new-recruitment/create:
+    post:
+      consumes:
+      - application/json
+      description: Merchant New Recruitment - Create
+      operationId: Merchant New Recruitment - Create
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/dbmodels.MerchantNewRecruitments'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Merchant New Recruitment - Create EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Merchant New Recruitment - Create
+      tags:
+      - Merchant New Rec
+  /ottosfa/v2/merchant-new-recruitment/detail/:merchant_new_rec_id:
+    get:
+      consumes:
+      - application/json
+      description: Merchant New Recruitment - Detail
+      operationId: Merchant New Recruitment - Detail
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Merchant New Recruitment - Detail EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.MerchantNewRecruitmentExportRes'
+              type: object
+      summary: Merchant New Recruitment - Detail
+      tags:
+      - Merchant New Rec
+  /ottosfa/v2/merchant-new-recruitment/download-template:
+    get:
+      consumes:
+      - application/json
+      description: Merchant New Recruitment - Download Template
+      operationId: Merchant New Recruitment - Download Template
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Merchant New Recruitment - Download Template EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Merchant New Recruitment - Download Template
+      tags:
+      - Merchant New Rec
+  /ottosfa/v2/merchant-new-recruitment/export:
+    post:
+      consumes:
+      - application/json
+      description: Merchant New Recruitment - Export
+      operationId: Merchant New Recruitment - Export
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.MerchantNewRecruitmentListReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Merchant New Recruitment - Export EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Merchant New Recruitment - Export
+      tags:
+      - Merchant New Rec
+  /ottosfa/v2/merchant-new-recruitment/list:
+    post:
+      consumes:
+      - application/json
+      description: Merchant New Recruitment - List
+      operationId: Merchant New Recruitment - List
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.MerchantNewRecruitmentListReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Merchant New Recruitment - List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.ResponsePagination'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dbmodels.MerchantNewRecruitments'
+                  type: array
+              type: object
+      summary: Merchant New Recruitment - List
+      tags:
+      - Merchant New Rec
+  /ottosfa/v2/merchant-type/list:
+    get:
+      consumes:
+      - application/json
+      description: MerchantType - List
+      operationId: MerchantType - List
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: MerchantType - List
+      tags:
+      - List
+  /ottosfa/v2/param-configuration/min-max-phone:
+    get:
+      consumes:
+      - application/json
+      description: ParamConfiguration - Get Min Max Phone
+      operationId: ParamConfiguration - MinMaxPhone
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ParamConfiguration - MinMaxPhone EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: ParamConfiguration - MinMaxPhone
+      tags:
+      - Param Config
+  /ottosfa/v2/province/list:
+    post:
+      consumes:
+      - application/json
+      description: Province - List
+      operationId: Province - List
+      parameters:
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.SearchReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Province - List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dbmodels.Provinces'
+                  type: array
+              type: object
+      summary: Province - List
+      tags:
+      - List
+  /ottosfa/v2/sales-retail/list:
+    get:
+      consumes:
+      - application/json
+      description: SalesRetail - List
+      operationId: SalesRetail - List
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: SalesRetail - List
+      tags:
+      - List
+  /ottosfa/v2/sub-area-channel/list:
+    post:
+      consumes:
+      - application/json
+      description: SubAreaChannel - List
+      operationId: SubAreaChannel - List
+      parameters:
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.SearchReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Sub Area Channel - List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dbmodels.SubArea'
+                  type: array
+              type: object
+      summary: SubAreaChannel - List
+      tags:
+      - List
+  /ottosfa/v2/todolist/bulk:
+    post:
+      consumes:
+      - application/json
+      description: Todolist - Upload
+      operationId: Todolist - Upload
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body with file csv
+        in: formData
+        name: file
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolist - Upload EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Todolist - Upload
+      tags:
+      - Todolist
+  /ottosfa/v2/todolist/create:
+    post:
+      consumes:
+      - application/json
+      description: Todolist - Create
+      operationId: Todolist - Create
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.CreateTodolist'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolists - Create EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Todolist - Create
+      tags:
+      - Todolist
+  /ottosfa/v2/todolist/detail/:todolist_id:
+    get:
+      consumes:
+      - application/json
+      description: Todolist - Detail
+      operationId: Todolist - Detail
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolists - Create EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Todolist - Detail
+      tags:
+      - Todolist
+  /ottosfa/v2/todolist/download-template:
+    get:
+      consumes:
+      - application/json
+      description: Todolist - Download Template
+      operationId: Todolist - Download Template
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolist - Download Template EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Todolist - Download Template
+      tags:
+      - Todolist
+  /ottosfa/v2/todolist/new-merchant-detail:
+    post:
+      consumes:
+      - application/json
+      description: Todolist - NewMerchantDetail
+      operationId: Todolist - NewMerchantDetail
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.NewMerchantDetailReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolists - Create EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Todolist - NewMerchantDetail
+      tags:
+      - Todolist
+  /ottosfa/v2/todolist/new-merchant-list:
+    post:
+      consumes:
+      - application/json
+      description: Todolist - NewMerchantList
+      operationId: Todolist - NewMerchantList
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.NewMerchantListReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolists - Create EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Todolist - NewMerchantList
+      tags:
+      - Todolist
+  /ottosfa/v2/todolist/update:
+    post:
+      consumes:
+      - application/json
+      description: Todolist - Update
+      operationId: Todolist - Update
+      parameters:
+      - description: Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.UpdateTodolist'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Todolists - Update EXAMPLE
+          schema:
+            $ref: '#/definitions/models.Response'
+      summary: Todolist - Update
+      tags:
+      - Todolist
+  /ottosfa/v2/village/list:
+    post:
+      consumes:
+      - application/json
+      description: Village - List
+      operationId: Village - List
+      parameters:
+      - description: Body
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/models.SearchReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Village - List Response EXAMPLE
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dbmodels.Village'
+                  type: array
+              type: object
+      summary: Village - List
+      tags:
+      - List
+swagger: "2.0"

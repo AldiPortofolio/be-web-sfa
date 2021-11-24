@@ -1,0 +1,3179 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {}
+    },
+    "paths": {
+        "/ottosfa/v2.2/merchant-new-recruitment/bulk": {
+            "post": {
+                "description": "Merchant New Recruitment - Upload",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Merchant New Rec v2.2"
+                ],
+                "summary": "Merchant New Recruitment - Upload",
+                "operationId": "Merchant New Recruitment - Upload v2.2",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "file",
+                        "description": "Body with file csv",
+                        "name": "file",
+                        "in": "formData",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Merchant New Recruitment - Upload EXAMPLE",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/Province/": {
+            "get": {
+                "description": "Province - list by country",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Province V2.3"
+                ],
+                "summary": "Province - list by country",
+                "operationId": "Province - list by country",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Todolists - Create EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/action-types": {
+            "get": {
+                "description": "Admin - ActionType",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin V2.3"
+                ],
+                "summary": "Admin - ActionType",
+                "operationId": "Admin - ActionType",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Todolists - Create EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/activitas-salesmen/detail-callplan": {
+            "get": {
+                "description": "Activitas Salesmen -  Detail Callplan",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Activitas Salesmen V2.3"
+                ],
+                "summary": "Activitas Salesmen -  Detail Callplan",
+                "operationId": "Activitas Salesmen -  Detail Callplan",
+                "responses": {
+                    "200": {
+                        "description": "Activitas Salesmen - Detail Sales EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/activitas-salesmen/detail-sales": {
+            "post": {
+                "description": "Activitas Salesmen -  Detail Sales",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Activitas Salesmen V2.3"
+                ],
+                "summary": "Activitas Salesmen -  Detail Sales",
+                "operationId": "Activitas Salesmen -  Detail Sales",
+                "parameters": [
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dbmodels.DetailActivitasSalesmenReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Activitas Salesmen - Detail Sales EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/activitas-salesmen/detail-todolist": {
+            "get": {
+                "description": "Activitas Salesmen -  Detail Todolist",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Activitas Salesmen V2.3"
+                ],
+                "summary": "Activitas Salesmen -  Detail Todolist",
+                "operationId": "Activitas Salesmen -  Detail Todolist",
+                "responses": {
+                    "200": {
+                        "description": "Activitas Salesmen - Detail Sales EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/activitas-salesmen/list": {
+            "post": {
+                "description": "Activitas Salesmen - List",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Activitas Salesmen V2.3"
+                ],
+                "summary": "Activitas Salesmen - List",
+                "operationId": "Activitas Salesmen - List",
+                "parameters": [
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dbmodels.ListActivitasSalesmenReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Activitas Salesmen - Create EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/activitas-salesmen/lits-detail-callplan": {
+            "post": {
+                "description": "Activitas Salesmen - List Detail Callplan",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Activitas Salesmen V2.3"
+                ],
+                "summary": "Activitas Salesmen - List Detail Callplan",
+                "operationId": "Activitas Salesmen - List Detail Callplan",
+                "parameters": [
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dbmodels.DetailListActivitasTodolistReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Activitas Salesmen - List Detail Callplan",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/activitas-salesmen/lits-detail-todolist": {
+            "post": {
+                "description": "Activitas Salesmen - List Detail Todo List",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Activitas Salesmen V2.3"
+                ],
+                "summary": "Activitas Salesmen - List Detail Todo List",
+                "operationId": "Activitas Salesmen - List Detail Todo List",
+                "parameters": [
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dbmodels.DetailListActivitasTodolistReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Activitas Salesmen - List Detail Todo List",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/admin-sub-area/delete-by-admin": {
+            "delete": {
+                "description": "AdminSubArea - DeleteByAdmin",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "AdminSubArea V2.3"
+                ],
+                "summary": "AdminSubArea - DeleteByAdmin",
+                "operationId": "AdminSubArea - DeleteByAdmin",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Todolists - Create EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/admin/role/list": {
+            "get": {
+                "description": "Role - List",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Role V2.3"
+                ],
+                "summary": "Role - List",
+                "operationId": "Role - List",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Todolists - Create EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/company-codes": {
+            "get": {
+                "description": "Company Codes - List",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Company Codes V2.3"
+                ],
+                "summary": "Company Codes - List",
+                "operationId": "Company Codes - List",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Todolists - Create EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/company//list": {
+            "get": {
+                "description": "Company - List",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Company V2.3"
+                ],
+                "summary": "Company - List",
+                "operationId": "Company - List",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Todolists - Create EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/country/": {
+            "get": {
+                "description": "Country - List",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Country V2.3"
+                ],
+                "summary": "Country - List",
+                "operationId": "Country - List",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Todolists - Create EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/gender/": {
+            "get": {
+                "description": "Gender - List",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Gender V2.3"
+                ],
+                "summary": "Gender - List",
+                "operationId": "Gender - List",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Todolists - Create EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/job-management/edit": {
+            "post": {
+                "description": "JobManagement - Edit",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "JobManagement"
+                ],
+                "summary": "JobManagement - Edit",
+                "operationId": "JobManagement - Edit",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.ReqEditJobManagement"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "JobManagement - Edit EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/job-management/filter": {
+            "post": {
+                "description": "JobManagement - Filter",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "JobManagement"
+                ],
+                "summary": "JobManagement - Filter",
+                "operationId": "JobManagement - Filter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.ReqFilterJobManagements"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.ResponsePagination"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/job-management/save": {
+            "post": {
+                "description": "JobManagement - Create",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "JobManagement"
+                ],
+                "summary": "JobManagement - Create",
+                "operationId": "JobManagement - Create",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dbmodels.JobManagements"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "JobManagement - Create EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/job-management/upload": {
+            "post": {
+                "description": "JobManagement - Upload",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "JobManagement"
+                ],
+                "summary": "JobManagement - Upload",
+                "operationId": "JobManagement - Upload",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "file",
+                        "description": "Body with file csv",
+                        "name": "file",
+                        "in": "formData",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "JobManagement - Upload EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/jobcategories/filter": {
+            "post": {
+                "description": "JobCategories - Filter",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "JobCategories"
+                ],
+                "summary": "JobCategories - Filter",
+                "operationId": "JobCategories - Filter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.ReqFilterJobCategories"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/jobcategories/save": {
+            "post": {
+                "description": "JobCategories - Create",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "JobCategories"
+                ],
+                "summary": "JobCategories - Create",
+                "operationId": "JobCategories - Create",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dbmodels.JobCategories"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "JobCategoriess - Create EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/jobcategories/update": {
+            "post": {
+                "description": "Jobcategories - Update",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Jobcategories"
+                ],
+                "summary": "Jobcategories - Update",
+                "operationId": "Jobcategories - Update",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dbmodels.JobCategories"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "jobcategoriess - Update EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/todolist/bulk": {
+            "post": {
+                "description": "Todolist - Upload",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Todolist"
+                ],
+                "summary": "Todolist - Upload",
+                "operationId": "Todolist - Upload V2.3",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "file",
+                        "description": "Body with file csv",
+                        "name": "file",
+                        "in": "formData",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Todolist - Upload EXAMPLE",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/todolist/create": {
+            "post": {
+                "description": "Todolist - Create V2.3",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Todolist V2.3"
+                ],
+                "summary": "Todolist - Create V2.3",
+                "operationId": "Todolist - Create V2.3",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.CreateTodolistV2"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Todolists - Create EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/todolist/detail/:todolist_id": {
+            "get": {
+                "description": "Todolist - Detail",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Todolist V2.3"
+                ],
+                "summary": "Todolist - Detail",
+                "operationId": "Todolist - Detail V2.3",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Todolists - Create EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/todolist/merchant-detail": {
+            "post": {
+                "description": "Merchant Detail",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "TodoList V2.3"
+                ],
+                "summary": "Merchant Detail",
+                "operationId": "merchant-detail",
+                "parameters": [
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.MerchantDetailReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/todolist/merchant-list": {
+            "post": {
+                "description": "Merchant List",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "TodoList V2.3"
+                ],
+                "summary": "Merchant List",
+                "operationId": "merchant-list",
+                "parameters": [
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.MerchantListReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/todolist/update": {
+            "post": {
+                "description": "Todolist - Update V2.3",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Todolist V2.3"
+                ],
+                "summary": "Todolist - Update V2.3",
+                "operationId": "Todolist - Update V2.3",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.UpdateTodolistV2"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Todolists - Update EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/upload-image": {
+            "post": {
+                "description": "Upload Image",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "UploadImage",
+                "operationId": "Upload Image",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "request body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/miniomodels.UploadReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2.3/village/list": {
+            "get": {
+                "description": "Village - List by district",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Village V2.3"
+                ],
+                "summary": "Village - List by district",
+                "operationId": "Village - List by district",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Todolists - Create EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/city/list": {
+            "post": {
+                "description": "City - List",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "List"
+                ],
+                "summary": "City - List",
+                "operationId": "City - List",
+                "parameters": [
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.SearchReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "City - List Response EXAMPLE",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.Cities"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/district/list": {
+            "post": {
+                "description": "District - List",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "List"
+                ],
+                "summary": "District - List",
+                "operationId": "District - List",
+                "parameters": [
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.SearchReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "District - List Response EXAMPLE",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.District"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/health-check": {
+            "get": {
+                "description": "Health Check",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "OTTO SFA WEB"
+                ],
+                "summary": "Health Check",
+                "operationId": "Health Check",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/institution/list": {
+            "post": {
+                "description": "Institution - List",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "List"
+                ],
+                "summary": "Institution - List",
+                "operationId": "Institution - List",
+                "parameters": [
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.SearchReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/merchant-business-type/list": {
+            "get": {
+                "description": "MerchantBusinessType - List",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "List"
+                ],
+                "summary": "MerchantBusinessType - List",
+                "operationId": "MerchantBusinessType - List",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/merchant-category/list": {
+            "get": {
+                "description": "MerchantCategory - List",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "List"
+                ],
+                "summary": "MerchantCategory - List",
+                "operationId": "MerchantCategory - List",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/merchant-group/list": {
+            "post": {
+                "description": "MerchantGroup - List",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "List"
+                ],
+                "summary": "MerchantGroup - List",
+                "operationId": "MerchantGroup - List",
+                "parameters": [
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.MerchantGroupReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/merchant-new-recruitment/bulk": {
+            "post": {
+                "description": "Merchant New Recruitment - Upload",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Merchant New Rec"
+                ],
+                "summary": "Merchant New Recruitment - Upload",
+                "operationId": "Merchant New Recruitment - Upload",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "file",
+                        "description": "Body with file csv",
+                        "name": "file",
+                        "in": "formData",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Merchant New Recruitment - Upload EXAMPLE",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/merchant-new-recruitment/create": {
+            "post": {
+                "description": "Merchant New Recruitment - Create",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Merchant New Rec"
+                ],
+                "summary": "Merchant New Recruitment - Create",
+                "operationId": "Merchant New Recruitment - Create",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/dbmodels.MerchantNewRecruitments"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Merchant New Recruitment - Create EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/merchant-new-recruitment/detail/:merchant_new_rec_id": {
+            "get": {
+                "description": "Merchant New Recruitment - Detail",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Merchant New Rec"
+                ],
+                "summary": "Merchant New Recruitment - Detail",
+                "operationId": "Merchant New Recruitment - Detail",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Merchant New Recruitment - Detail EXAMPLE",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "$ref": "#/definitions/models.MerchantNewRecruitmentExportRes"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/merchant-new-recruitment/download-template": {
+            "get": {
+                "description": "Merchant New Recruitment - Download Template",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Merchant New Rec"
+                ],
+                "summary": "Merchant New Recruitment - Download Template",
+                "operationId": "Merchant New Recruitment - Download Template",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Merchant New Recruitment - Download Template EXAMPLE",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/merchant-new-recruitment/export": {
+            "post": {
+                "description": "Merchant New Recruitment - Export",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Merchant New Rec"
+                ],
+                "summary": "Merchant New Recruitment - Export",
+                "operationId": "Merchant New Recruitment - Export",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.MerchantNewRecruitmentListReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Merchant New Recruitment - Export EXAMPLE",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/merchant-new-recruitment/list": {
+            "post": {
+                "description": "Merchant New Recruitment - List",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Merchant New Rec"
+                ],
+                "summary": "Merchant New Recruitment - List",
+                "operationId": "Merchant New Recruitment - List",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.MerchantNewRecruitmentListReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Merchant New Recruitment - List Response EXAMPLE",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.ResponsePagination"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.MerchantNewRecruitments"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/merchant-type/list": {
+            "get": {
+                "description": "MerchantType - List",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "List"
+                ],
+                "summary": "MerchantType - List",
+                "operationId": "MerchantType - List",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/param-configuration/min-max-phone": {
+            "get": {
+                "description": "ParamConfiguration - Get Min Max Phone",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Param Config"
+                ],
+                "summary": "ParamConfiguration - MinMaxPhone",
+                "operationId": "ParamConfiguration - MinMaxPhone",
+                "responses": {
+                    "200": {
+                        "description": "ParamConfiguration - MinMaxPhone EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/province/list": {
+            "post": {
+                "description": "Province - List",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "List"
+                ],
+                "summary": "Province - List",
+                "operationId": "Province - List",
+                "parameters": [
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.SearchReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Province - List Response EXAMPLE",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.Provinces"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/sales-retail/list": {
+            "get": {
+                "description": "SalesRetail - List",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "List"
+                ],
+                "summary": "SalesRetail - List",
+                "operationId": "SalesRetail - List",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/sub-area-channel/list": {
+            "post": {
+                "description": "SubAreaChannel - List",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "List"
+                ],
+                "summary": "SubAreaChannel - List",
+                "operationId": "SubAreaChannel - List",
+                "parameters": [
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.SearchReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Sub Area Channel - List Response EXAMPLE",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.SubArea"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/todolist/bulk": {
+            "post": {
+                "description": "Todolist - Upload",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Todolist"
+                ],
+                "summary": "Todolist - Upload",
+                "operationId": "Todolist - Upload",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "file",
+                        "description": "Body with file csv",
+                        "name": "file",
+                        "in": "formData",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Todolist - Upload EXAMPLE",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/todolist/create": {
+            "post": {
+                "description": "Todolist - Create",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Todolist"
+                ],
+                "summary": "Todolist - Create",
+                "operationId": "Todolist - Create",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.CreateTodolist"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Todolists - Create EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/todolist/detail/:todolist_id": {
+            "get": {
+                "description": "Todolist - Detail",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Todolist"
+                ],
+                "summary": "Todolist - Detail",
+                "operationId": "Todolist - Detail",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Todolists - Create EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/todolist/download-template": {
+            "get": {
+                "description": "Todolist - Download Template",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Todolist"
+                ],
+                "summary": "Todolist - Download Template",
+                "operationId": "Todolist - Download Template",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Todolist - Download Template EXAMPLE",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/todolist/new-merchant-detail": {
+            "post": {
+                "description": "Todolist - NewMerchantDetail",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Todolist"
+                ],
+                "summary": "Todolist - NewMerchantDetail",
+                "operationId": "Todolist - NewMerchantDetail",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.NewMerchantDetailReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Todolists - Create EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/todolist/new-merchant-list": {
+            "post": {
+                "description": "Todolist - NewMerchantList",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Todolist"
+                ],
+                "summary": "Todolist - NewMerchantList",
+                "operationId": "Todolist - NewMerchantList",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.NewMerchantListReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Todolists - Create EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/todolist/update": {
+            "post": {
+                "description": "Todolist - Update",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Todolist"
+                ],
+                "summary": "Todolist - Update",
+                "operationId": "Todolist - Update",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Bearer 7n1cdTNMK_EeoXr_0D0luYJ68NaYESWxyPXd",
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.UpdateTodolist"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Todolists - Update EXAMPLE",
+                        "schema": {
+                            "$ref": "#/definitions/models.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/ottosfa/v2/village/list": {
+            "post": {
+                "description": "Village - List",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "List"
+                ],
+                "summary": "Village - List",
+                "operationId": "Village - List",
+                "parameters": [
+                    {
+                        "description": "Body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.SearchReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Village - List Response EXAMPLE",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/models.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/dbmodels.Village"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "dbmodels.Cities": {
+            "type": "object",
+            "properties": {
+                "city_code": {
+                    "type": "string"
+                },
+                "created_at": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "name": {
+                    "type": "string"
+                },
+                "province_id": {
+                    "type": "integer"
+                },
+                "updated_at": {
+                    "type": "string"
+                }
+            }
+        },
+        "dbmodels.DetailActivitasSalesmenReq": {
+            "type": "object",
+            "properties": {
+                "date": {
+                    "type": "string",
+                    "example": "2020-11-20"
+                },
+                "id": {
+                    "type": "string",
+                    "example": "9957"
+                }
+            }
+        },
+        "dbmodels.DetailListActivitasTodolistReq": {
+            "type": "object",
+            "properties": {
+                "category": {
+                    "type": "integer",
+                    "example": 2
+                },
+                "date": {
+                    "type": "string",
+                    "example": "2020-11-20"
+                },
+                "id": {
+                    "type": "string",
+                    "example": "9957"
+                },
+                "keyword": {
+                    "type": "string",
+                    "example": "OP1B00027785"
+                },
+                "page": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "status": {
+                    "type": "string",
+                    "example": "Not Exist"
+                }
+            }
+        },
+        "dbmodels.District": {
+            "type": "object",
+            "properties": {
+                "city_id": {
+                    "type": "integer"
+                },
+                "created_at": {
+                    "type": "string"
+                },
+                "district_code": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "name": {
+                    "type": "string"
+                },
+                "updated_at": {
+                    "type": "string"
+                }
+            }
+        },
+        "dbmodels.JobCategories": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "dbmodels.JobDescriptions": {
+            "type": "object",
+            "properties": {
+                "descLink": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "jobManagementId": {
+                    "type": "integer"
+                },
+                "note": {
+                    "type": "string"
+                },
+                "noteLink": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "dbmodels.JobManagements": {
+            "type": "object",
+            "properties": {
+                "acceptDate": {
+                    "type": "string"
+                },
+                "assignmentDate": {
+                    "type": "string"
+                },
+                "cancelDate": {
+                    "type": "string"
+                },
+                "completeDate": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string"
+                },
+                "deadline": {
+                    "type": "string"
+                },
+                "deliverDate": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "jobCategoryId": {
+                    "type": "integer"
+                },
+                "jobDescriptions": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/dbmodels.JobDescriptions"
+                    }
+                },
+                "jobPriority": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "recipientId": {
+                    "type": "integer"
+                },
+                "resendDate": {
+                    "type": "string"
+                },
+                "senderId": {
+                    "type": "integer"
+                },
+                "status": {
+                    "type": "integer"
+                },
+                "statusStorage": {
+                    "type": "boolean"
+                },
+                "updatedAt": {
+                    "type": "string"
+                }
+            }
+        },
+        "dbmodels.ListActivitasSalesmenReq": {
+            "type": "object",
+            "properties": {
+                "Name": {
+                    "type": "string",
+                    "example": "SO TIMUR Indomarco"
+                },
+                "page": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "period_from": {
+                    "type": "string",
+                    "example": "2021-02-05"
+                },
+                "period_to": {
+                    "type": "string",
+                    "example": "2021-02-10"
+                },
+                "sales_type_id": {
+                    "type": "string",
+                    "example": "1"
+                }
+            }
+        },
+        "dbmodels.MerchantNewRecruitments": {
+            "type": "object",
+            "properties": {
+                "address": {
+                    "type": "string",
+                    "example": "Jalan Buntu no 21"
+                },
+                "city_id": {
+                    "type": "integer",
+                    "example": 3171
+                },
+                "created_at": {
+                    "type": "string"
+                },
+                "customer_code": {
+                    "type": "string",
+                    "example": "1234566543216.0"
+                },
+                "district_id": {
+                    "type": "integer",
+                    "example": 3171100
+                },
+                "id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "id_card": {
+                    "type": "string",
+                    "example": "12345678909887654"
+                },
+                "institution_code": {
+                    "type": "string",
+                    "example": "OP"
+                },
+                "latitude": {
+                    "type": "string",
+                    "example": "-6.2354219"
+                },
+                "longitude": {
+                    "type": "string",
+                    "example": "106.81721122"
+                },
+                "name": {
+                    "type": "string",
+                    "example": "Test Data 2"
+                },
+                "owner_name": {
+                    "type": "string",
+                    "example": "Namaku Siapa Ya"
+                },
+                "phone_number": {
+                    "type": "string",
+                    "example": "088999121367"
+                },
+                "province_id": {
+                    "type": "integer",
+                    "example": 31
+                },
+                "sales_type_id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "status": {
+                    "type": "string",
+                    "example": "Activated"
+                },
+                "sub_area_channel_id": {
+                    "type": "integer",
+                    "example": 4
+                },
+                "sub_area_channel_name": {
+                    "type": "string",
+                    "example": "Sub Area Jabar 0004"
+                },
+                "updated_at": {
+                    "type": "string"
+                },
+                "village_id": {
+                    "type": "integer",
+                    "example": 3171100008
+                }
+            }
+        },
+        "dbmodels.Provinces": {
+            "type": "object",
+            "properties": {
+                "created_at": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "name": {
+                    "type": "string",
+                    "example": "IDM"
+                },
+                "province_code": {
+                    "type": "string",
+                    "example": "IDM"
+                },
+                "updated_at": {
+                    "type": "string"
+                }
+            }
+        },
+        "dbmodels.SubArea": {
+            "type": "object",
+            "properties": {
+                "area_id": {
+                    "type": "integer"
+                },
+                "code": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "dbmodels.Village": {
+            "type": "object",
+            "properties": {
+                "created_at": {
+                    "type": "string"
+                },
+                "district_id": {
+                    "type": "integer"
+                },
+                "id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "name": {
+                    "type": "string"
+                },
+                "updated_at": {
+                    "type": "string"
+                },
+                "village_code": {
+                    "type": "string"
+                }
+            }
+        },
+        "miniomodels.UploadReq": {
+            "type": "object",
+            "properties": {
+                "bucketName": {
+                    "type": "string"
+                },
+                "contentType": {
+                    "type": "string"
+                },
+                "data": {
+                    "type": "string"
+                },
+                "nameFile": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.CreateTodolist": {
+            "type": "object",
+            "properties": {
+                "customer_code": {
+                    "type": "string"
+                },
+                "merchant_id": {
+                    "type": "string"
+                },
+                "merchant_name": {
+                    "type": "string"
+                },
+                "merchant_phone": {
+                    "type": "string"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "sales_phone": {
+                    "type": "string"
+                },
+                "sales_type_id": {
+                    "type": "string"
+                },
+                "task_attributes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.TaskParams"
+                    }
+                },
+                "task_date": {
+                    "type": "string"
+                },
+                "todolist_category_id": {
+                    "type": "integer"
+                },
+                "village_id": {
+                    "type": "integer"
+                }
+            }
+        },
+        "models.CreateTodolistV2": {
+            "type": "object",
+            "properties": {
+                "address": {
+                    "type": "string",
+                    "example": "AIA Central Lt. 27, Jl. Jend. Sudirman No.Kav 48A, RT.5/RW.4, Karet Semanggi, Setia Budi, RT.5/RW.4, Karet Semanggi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12930, Indonesia"
+                },
+                "address_benchmark": {
+                    "type": "string",
+                    "example": "sebelah rumah sakit jiwa"
+                },
+                "customer_code": {
+                    "type": "string",
+                    "example": "5200522100082316.0"
+                },
+                "merchant_id": {
+                    "type": "integer",
+                    "example": 53229
+                },
+                "merchant_name": {
+                    "type": "string",
+                    "example": "Merchant Test"
+                },
+                "merchant_phone": {
+                    "type": "string",
+                    "example": "082222230118"
+                },
+                "mid": {
+                    "type": "string",
+                    "example": "OP1B00000083"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "owner_name": {
+                    "type": "string",
+                    "example": "Wawan"
+                },
+                "sales_phone": {
+                    "type": "string",
+                    "example": "082113776997"
+                },
+                "sales_type_id": {
+                    "type": "integer",
+                    "example": 2
+                },
+                "task_attributes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.TaskParams"
+                    }
+                },
+                "task_date": {
+                    "type": "string",
+                    "example": "2021-24-04"
+                },
+                "todolist_category_id": {
+                    "type": "integer",
+                    "example": 6
+                },
+                "village_id": {
+                    "type": "integer",
+                    "example": 3171100008
+                }
+            }
+        },
+        "models.MerchantDetailReq": {
+            "type": "object",
+            "properties": {
+                "merchant_id": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.MerchantGroupReq": {
+            "type": "object",
+            "properties": {
+                "merchant_type": {
+                    "type": "string",
+                    "example": "UMKM"
+                }
+            }
+        },
+        "models.MerchantListReq": {
+            "type": "object",
+            "properties": {
+                "keyword": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.MerchantNewRecruitmentExportRes": {
+            "type": "object",
+            "properties": {
+                "address": {
+                    "type": "string",
+                    "example": "Jalan Buntu no 21"
+                },
+                "city_id": {
+                    "type": "integer",
+                    "example": 3171
+                },
+                "city_name": {
+                    "type": "string",
+                    "example": "KOTA JAKARTA SELATAN"
+                },
+                "created_at": {
+                    "type": "string"
+                },
+                "customer_code": {
+                    "type": "string",
+                    "example": "1234566543216.0"
+                },
+                "district_id": {
+                    "type": "integer",
+                    "example": 3171100
+                },
+                "district_name": {
+                    "type": "string",
+                    "example": "SETIA BUDI"
+                },
+                "id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "id_card": {
+                    "type": "string",
+                    "example": "12345678909887654"
+                },
+                "institution_code": {
+                    "type": "string",
+                    "example": "OP"
+                },
+                "latitude": {
+                    "type": "string",
+                    "example": "-6.2354219"
+                },
+                "longitude": {
+                    "type": "string",
+                    "example": "106.81721122"
+                },
+                "name": {
+                    "type": "string",
+                    "example": "Test Data 2"
+                },
+                "owner_name": {
+                    "type": "string",
+                    "example": "Namaku Siapa Ya"
+                },
+                "phone_number": {
+                    "type": "string",
+                    "example": "088999121367"
+                },
+                "province_id": {
+                    "type": "integer",
+                    "example": 31
+                },
+                "province_name": {
+                    "type": "string",
+                    "example": "DKI JAKARTA"
+                },
+                "sales_type_id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "status": {
+                    "type": "string",
+                    "example": "Activated"
+                },
+                "sub_area_channel_id": {
+                    "type": "integer",
+                    "example": 4
+                },
+                "sub_area_channel_name": {
+                    "type": "string",
+                    "example": "Sub Area Jabar 0004"
+                },
+                "updated_at": {
+                    "type": "string"
+                },
+                "village_id": {
+                    "type": "integer",
+                    "example": 3171100008
+                },
+                "village_name": {
+                    "type": "string",
+                    "example": "SETIA BUDI"
+                }
+            }
+        },
+        "models.MerchantNewRecruitmentListReq": {
+            "type": "object",
+            "properties": {
+                "customer_code": {
+                    "type": "string",
+                    "example": "566543"
+                },
+                "id": {
+                    "type": "string",
+                    "example": "2"
+                },
+                "institution_code": {
+                    "type": "string",
+                    "example": "OP"
+                },
+                "name": {
+                    "type": "string",
+                    "example": "Data"
+                },
+                "page": {
+                    "type": "integer"
+                },
+                "phone_number": {
+                    "type": "string",
+                    "example": "088999121367"
+                },
+                "status": {
+                    "type": "string",
+                    "example": "Activated"
+                },
+                "sub_area_channel_name": {
+                    "type": "string",
+                    "example": "0004"
+                }
+            }
+        },
+        "models.Meta": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "example": 200
+                },
+                "message": {
+                    "type": "string",
+                    "example": "OK"
+                },
+                "status": {
+                    "type": "boolean",
+                    "example": true
+                }
+            }
+        },
+        "models.NewMerchantDetailReq": {
+            "type": "object",
+            "properties": {
+                "customer_code": {
+                    "type": "string"
+                },
+                "phone_number": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.NewMerchantListReq": {
+            "type": "object",
+            "properties": {
+                "keyword": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.ReqEditJobManagement": {
+            "type": "object",
+            "properties": {
+                "acceptDate": {
+                    "description": "AssignmentDate  string                     `json:\"assignmentDate\"`\nStatusStorage   bool                       `json:\"statusStorage\"`\nCreatedAt       string                     `json:\"createdAt\"`\nUpdatedAt       string                     `json:\"updatedAt\" example:\"2021-10-25\"`",
+                    "type": "string",
+                    "example": "2021-10-25"
+                },
+                "cancelDate": {
+                    "type": "string",
+                    "example": "2021-10-25"
+                },
+                "completeDate": {
+                    "type": "string",
+                    "example": "2021-10-25"
+                },
+                "deliverDate": {
+                    "type": "string",
+                    "example": "2021-10-25"
+                },
+                "id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "jobDescriptions": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/dbmodels.JobDescriptions"
+                    }
+                },
+                "recipientId": {
+                    "type": "integer"
+                },
+                "resendDate": {
+                    "type": "string",
+                    "example": "2021-10-25"
+                },
+                "senderId": {
+                    "description": "Name            string                     `json:\"name\"`\nJobCategoryId   int64                      `json:\"jobCategoryId\"`",
+                    "type": "integer"
+                },
+                "status": {
+                    "description": "Deadline        string                     `json:\"deadline\"`\nJobPriority     string                     `json:\"jobPriority\"`",
+                    "type": "integer",
+                    "example": 3
+                }
+            }
+        },
+        "models.ReqFilterJobCategories": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "limit": {
+                    "type": "integer",
+                    "example": 10
+                },
+                "name": {
+                    "type": "string",
+                    "example": "Kategori A"
+                },
+                "page": {
+                    "type": "integer",
+                    "example": 1
+                }
+            }
+        },
+        "models.ReqFilterJobManagements": {
+            "type": "object",
+            "properties": {
+                "dateEnd": {
+                    "type": "string",
+                    "example": "2021-10-19"
+                },
+                "dateStart": {
+                    "type": "string",
+                    "example": "2021-10-19"
+                },
+                "id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "jobCategoryId": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "jobPriority": {
+                    "type": "string",
+                    "example": "High"
+                },
+                "limit": {
+                    "type": "integer",
+                    "example": 10
+                },
+                "name": {
+                    "type": "string",
+                    "example": "Kategori A"
+                },
+                "page": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "recipientId": {
+                    "type": "integer"
+                },
+                "senderId": {
+                    "type": "integer"
+                },
+                "status": {
+                    "type": "integer",
+                    "example": 3
+                },
+                "statusStorage": {
+                    "type": "boolean",
+                    "example": false
+                }
+            }
+        },
+        "models.Response": {
+            "type": "object",
+            "properties": {
+                "data": {},
+                "meta": {
+                    "$ref": "#/definitions/models.Meta"
+                }
+            }
+        },
+        "models.ResponsePagination": {
+            "type": "object",
+            "properties": {
+                "data": {},
+                "message": {
+                    "type": "string",
+                    "example": "success"
+                },
+                "meta": {},
+                "response_code": {
+                    "type": "string",
+                    "example": "00"
+                }
+            }
+        },
+        "models.SearchReq": {
+            "type": "object",
+            "properties": {
+                "keyword": {
+                    "type": "string",
+                    "example": "IDM"
+                }
+            }
+        },
+        "models.TaskParams": {
+            "type": "object",
+            "properties": {
+                "file_edukasi": {
+                    "type": "string"
+                },
+                "sub_category_id": {
+                    "type": "string"
+                },
+                "supplier_name": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.UpdateTodolist": {
+            "type": "object",
+            "properties": {
+                "category_id": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "merchant_id": {
+                    "description": "ID of merchant or merchant_new_recruitment",
+                    "type": "string"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "sales_phone": {
+                    "type": "string"
+                },
+                "task_attributes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.TaskParams"
+                    }
+                },
+                "task_date": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.UpdateTodolistV2": {
+            "type": "object",
+            "properties": {
+                "address": {
+                    "type": "string",
+                    "example": "AIA Central Lt. 27, Jl. Jend. Sudirman No.Kav 48A, RT.5/RW.4, Karet Semanggi, Setia Budi, RT.5/RW.4, Karet Semanggi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12930, Indonesia"
+                },
+                "address_benchmark": {
+                    "type": "string",
+                    "example": "sebelah rumah sakit jiwa"
+                },
+                "category_id": {
+                    "type": "string",
+                    "example": "6"
+                },
+                "id": {
+                    "type": "string",
+                    "example": "136129"
+                },
+                "merchant_id": {
+                    "description": "ID of merchant or merchant_new_recruitment",
+                    "type": "string",
+                    "example": "2"
+                },
+                "merchant_phone": {
+                    "type": "string",
+                    "example": "082222230118"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "owner_name": {
+                    "type": "string",
+                    "example": "Wawan"
+                },
+                "sales_phone": {
+                    "type": "string",
+                    "example": "082113776997"
+                },
+                "sales_type_id": {
+                    "type": "integer"
+                },
+                "task_attributes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.TaskParams"
+                    }
+                },
+                "task_date": {
+                    "type": "string",
+                    "example": "2021-08-24"
+                }
+            }
+        }
+    }
+}

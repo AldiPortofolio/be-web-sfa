@@ -1,0 +1,133 @@
+[
+    {
+        "key": "merchant.new.recruitment.export.success",
+        "content": {
+            "status": true,
+            "code": 200,
+            "message": "Merchant New Recruitment has been successfully Export."
+        }
+    },
+    {
+        "key": "merchant.new.recruitment.export.failed",
+        "content": {
+            "code": 422,
+            "message": "Failed to Export Merchant New Recruitment."
+        }
+    },
+    {
+        "key": "merchant.new.recruitment.create.success",
+        "content": {
+            "status": true,
+            "code": 200,
+            "message": "Merchant New Recruitment has been successfully created."
+        }
+    },
+    {
+        "key": "merchant.new.recruitment.create.failed",
+        "content": {
+            "code": 422,
+            "message": "Failed to Create Merchant New Recruitment."
+        }
+    },
+    {
+        "key": "merchant.new.recruitment.detail.failed",
+        "content": {
+            "code": 422,
+            "message": "Failed to Get Merchant New Recruitment."
+        }
+    },
+    {
+        "key": "merchant.new.recruitment.create.phone.number.exist",
+        "content": {
+            "code": 422,
+            "message": "Phone Number already exist."
+        }
+    },
+    {
+        "key": "merchant.new.recruitment.update.success",
+        "content": {
+            "status": true,
+            "code": 200,
+            "message": "Merchant New Recruitment has been successfully updated."
+        }
+    },
+    {
+        "key": "merchant.new.recruitment.update.failed",
+        "content": {
+            "status": false,
+            "code": 422,
+            "message": "Failed to Update Merchant New Recruitment."
+        }
+    },
+    {
+        "key": "job.categories.create.failed",
+        "content": {
+            "code": 422,
+            "message": "Failed to Create Job Categories."
+        }
+    },
+    {
+        "key": "job.categories.recruitment.create.success",
+        "content": {
+            "status": true,
+            "code": 200,
+            "message": "Job Categories has been successfully created."
+        }
+    },
+    {
+        "key": "job.categories.update.success",
+        "content": {
+            "status": true,
+            "code": 200,
+            "message": "Job categories has been successfully updated."
+        }
+    },
+    {
+        "key": "job.categories.update.failed",
+        "content": {
+            "status": false,
+            "code": 422,
+            "message": "Failed to Update Job Categories."
+        }
+    },
+    {
+        "key": "job.categories.Find.failed",
+        "content": {
+            "status": false,
+            "code": 422,
+            "message": "Job Categories Not Found In Database."
+        }
+    },
+    {
+        "key": "attendance.detail.failed",
+        "content": {
+            "status": false,
+            "code": 422,
+            "message": "Failed to Get Attendance Detail."
+        }
+    },
+    {
+        "key": "attendance.validate.failed",
+        "content": {
+            "status": false,
+            "code": 422,
+            "message": "Failed to Update Status Attendance."
+        }
+    },
+    {
+        "key": "attendance.export.failed",
+        "content": {
+            "status": false,
+            "code": 422,
+            "message": "Failed to export attendance."
+        }
+    },
+    {
+        "key": "attendance.export.success",
+        "content": {
+            "status": true,
+            "code": 200,
+            "message": "Attendance has been successfully Export."
+        }
+    }
+]

@@ -1,0 +1,2 @@
+2021-11-08 17:26:47:	{InstitutionID: ServiceName: LogType: Data:{PublishTime:2021-11-08 17:26:47 LogLevel:info TraceID: ActionTo: ActionName: EndPoint: ErrorDesc: FileName:attendance/List.go-- line : 47 AdditionalData: RequestBody: RequestHeader: ResponseBody: ResponseHeader: ResponseId:}}
+2021-11-08 17:26:48:	{InstitutionID: ServiceName: LogType: Data:{PublishTime:2021-11-08 17:26:48 LogLevel:info TraceID: ActionTo: ActionName: EndPoint: ErrorDesc: FileName:attendance/List.go-- line : 57 AdditionalData: RequestBody: RequestHeader: ResponseBody: ResponseHeader: ResponseId:}}
